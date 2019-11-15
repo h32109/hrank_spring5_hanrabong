@@ -61,9 +61,9 @@ main=(()=>{
 					switch($(this).attr('name')){
 					case 'home' : home()
 						break;
-					case 'bugs' : bugs()
+					case 'bugs' : bugs.onCreate()
 						break;
-					case 'cgv' : cgv()
+					case 'cgv' : cgv.onCreate()
 						break;
 					case 'naver' : naver.onCreate()
 						break;
@@ -72,13 +72,8 @@ main=(()=>{
 		})
 	}
 
-	let bugs=()=>{
-		bugs.onCreate()
-	}
-	let cgv=()=>{
-		cgv.onCreate()
 
-	}
+
 	return {onCreate}
 })();
 	

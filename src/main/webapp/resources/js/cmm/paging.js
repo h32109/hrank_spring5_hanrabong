@@ -1,5 +1,5 @@
 "use strict"
-var paging = paging || ()
+var paging = paging ||{}
 paging = (()=>{
 	let _, js, css
 	let init =()=>{

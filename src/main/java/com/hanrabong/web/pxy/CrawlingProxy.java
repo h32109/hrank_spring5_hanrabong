@@ -11,10 +11,10 @@ import org.jsoup.select.Elements;
 
 public class CrawlingProxy {
 	public List<String> crawl(Map<?,?> paramMap) {
+		List<String> artist2 = new ArrayList<>();
 		try {
 		Document rawData = Jsoup.connect((String) paramMap.get("url")).timeout(10*1000).get();
 		Elements artist = rawData.select((String) paramMap.get("node"));
-		List<String> artist2 = new ArrayList<>();
 		for(Element e : artist) {
 		artist2.add(e.text());
 		}
@@ -22,6 +22,6 @@ public class CrawlingProxy {
 		} catch (Exception e2) {
 		e2.printStackTrace();
 		}
-		return null;
+		return artist2;
 		}
 }
